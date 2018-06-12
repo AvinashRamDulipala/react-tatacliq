@@ -116,12 +116,16 @@ var navbar = document.getElementById("navbar");
 function myFunction() {
   if (window.pageYOffset >= 50) {
 
-document.getElementById("header").style.display = "block";
+if(document.getElementById("header") != null) {
+  document.getElementById("header").style.display = "block";
+}
+
     navbar.classList.add("sticky")
   } else {
    
+   if(document.getElementById("header") != null) {
     document.getElementById("header").style.display = "none";
-
+}
      navbar.classList.remove("sticky");
 
   }
